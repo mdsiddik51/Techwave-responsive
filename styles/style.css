@@ -95,4 +95,141 @@ main .hero-container .hero-button .hero-section-button-2{
     background-color: rgba(255, 255, 255, 0.1);
     border: none;
     margin-top: 24px;
+    margin-left: 8px;
+    margin-bottom: 101px;
 }
+main .hero-container .microphon-img .badge{
+    width: 75px;
+    height: 37px;
+    color: #1A0B2E;
+    background-color: #00FF88;
+    padding: 8px 16px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    border-radius: 1000px;
+     position: relative;
+    left: 58%;
+    top: 150px;
+    margin-bottom: 101px;
+}
+
+.about-section .about-container{
+    max-width: 1600px;
+    height: 648px;
+    background-color: #1A0B2E;
+    justify-items: center;
+}
+.about-section .about-container .abut-detels{
+    max-width: 1200px;
+    height: 223px;
+    text-align: center;
+    padding-top: 50px;
+    color: #ffffff;
+
+}
+.about-section .about-container .abut-detels h1{
+    font-size: 3rem;
+    font-style: 700;
+    margin-bottom: 16px;
+}
+.about-section .about-container .abut-detels h5,p{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.about-hr{
+    width: 1200px;
+    height: 0;
+    margin: 80px auto;
+
+}
+.Rating-container{
+    display: grid;
+}
+.Rating-1{
+    grid-area: Rating-1;
+}
+.Rating-2{
+    grid-area: Rating-2;
+}
+.Rating-3{
+    grid-area: Rating-3;
+}
+.Rating-4{
+    grid-area: Rating-4;
+}
+.Rating-container{
+    grid-template-areas: "Rating-1 Rating-2 Rating-3 Rating-4" ;
+    text-align: center;
+    gap: 80px;
+    
+}
+.Rating{
+    margin-left: 80px;
+}
+.Rating-container .rating-header{
+    font-size: 3rem;
+    font-weight: 900;
+    color: #00FF88;
+    margin-bottom: 16px;
+}
+.about-section .about-container .Rating-container p{
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+
+/* Responsive with Media Queries */
+@media screen and (max-width:576px) {
+    .navbar{
+        max-width: 100%;
+        height: 60px;
+        padding: 16px 18px ;
+    }
+    .navbar .logo img{
+        width: 137px;
+        height: 20px;
+    }
+    .navbar ul,button{
+        display: none;
+    }
+    .navbar .hamburger-menu{
+        content: url(../assets/hamburger-menu.png);
+        margin-right: 18px;
+    }
+    main .hero-container{
+        width: 440;
+        height: 466px;
+        background-position: bottom center;
+        background-size: cover;
+    }
+    main .hero-container .microphon-img .circle{
+        width: 200px;
+        height: 200px;
+        top: 18%;
+        left: 30%;
+        margin-bottom: 20px;
+    }
+    main .hero-container .microphon-img .microphon{
+        height: 80px;
+        top: 25%;
+        left: 44%;
+    }
+    main .hero-container .microphon-img .badge{
+        width: 70px;
+        height: 35px;
+        top: 75px;
+        left: 55%;
+    }
+
+    
+}
+
+
