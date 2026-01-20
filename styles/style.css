@@ -369,6 +369,41 @@ main .hero-container .microphon-img .badge{
     display: flex;
     gap: 8px;
 }
+.footer-section{
+    width: 100vw;
+    background-image: url(../assets/footer-bg.png);
+    justify-items: center;
+    padding: 120px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center; 
+}
+.footer-section .footer-logo img{
+    margin-bottom: 32px;
+}
+.footer-section .footer-logo-section ul li{
+    list-style: none;
+    margin-right: 40px;
+    display: inline;
+}
+.footer-section .footer-logo-section ul li img{
+    margin-right: 8px;
+}
+.footer-section .footer-logo-section p{
+    margin-top: 32px;
+}
+.footer-section .footer-logo-section ul li{
+    color: #ffffff;
+    font-weight: 500;
+}
+.footer-section .footer-logo-section p{
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    
+}
 
 
 
