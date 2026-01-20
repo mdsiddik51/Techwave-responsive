@@ -2,6 +2,9 @@
     padding: 0;
     margin: 0;
 }
+body{
+    overflow-x: hidden;
+}
 
 .open-sans {
   font-family: "Open Sans", sans-serif;
@@ -121,7 +124,7 @@ main .hero-container .microphon-img .badge{
     justify-items: center;
 }
 .about-section .about-container .abut-detels{
-    max-width: 1200px;
+    width: 1200px;
     height: 223px;
     text-align: center;
     padding-top: 50px;
@@ -179,16 +182,15 @@ main .hero-container .microphon-img .badge{
 
 .choose-container{
     max-width: 1600px;
-    width: 1200pxj;
-    height: 1222px;
+    height: 1400px;
     background-color: rgba(35, 14, 61, 1);
-    padding: 120px 200px;
     justify-items: center;
 }
 .choose-section .choose-container h2{
     font-size: 3rem;
     font-style: 700;
     color: #ffffff;
+    padding-top: 120px;
 }
 .card-1{
     grid-area: card-1;
@@ -258,16 +260,122 @@ main .hero-container .microphon-img .badge{
     height: 273px;
 }
 
+.episodes-section {
+    width: 100%;
+    height: 1340px;
+    background-color: rgba(26, 11, 46, 1);
+    text-align: center;
+}
+.episodes-section .episodes-container h2{
+    font-size: 3.12rem;
+    font-weight: 700;
+    line-height: 58px;
+    color: #ffffff;
+    padding-top: 120px;
+    margin-bottom: 40px;
+}
+.epsoeds{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.epsoeds .episodes-card{
+    width: 380px;
+    height: 440px;
+    border-radius: 24px;
+    background-color: rgba(37, 13, 68, 1);
+    text-align: left;
+}
+.epsoeds .episodes-card iframe{
+    width: 380px;
+    height: 214px;
+    border-radius: 24px 24px 0px 0px;
+    padding: 0;
+}
+.epsoeds .episodes-card .epsoeds-ditels{
+    width: 380px;
+    height: 226px;
+}
+.epsoeds .episodes-card .epsoeds-ditels h3{
+    font-size: 1.5rem;
+    color: #ffffff;
+    padding: 24px 24px 0 24px;
+    font-weight: 700;
 
+}
+.epsoeds .episodes-card .epsoeds-ditels p{
+    font-size: 1rem;
+    color: #ffffff;
+    padding: 0 24px 0 24px;
+    margin-top: 12px;
+    font-weight: 400;
+    line-height: 24px;
+}
+.epsoeds .episodes-card .epsoeds-ditels h5{
+    padding: 12px 24px 0 24px;
+    color: #00FF88;
+    font-size: 1rem;
+    font-weight: 500;
 
-
+}
+.epsoeds .episodes-card .epsoeds-ditels h5::before{
+    content: url(../assets/clock.png);
+    margin-right: 5px;
+}
+.host-heder h1{
+    font-size: 3rem;
+    color: #ffffff;
+    margin-top: 120px;
+    font-weight: 700;
+    line-height: 58px;
+    margin-bottom: 40px;
+}
+.host-sction{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 40px;
+    width: 1200px;
+    height: 280px;
+    background-color: rgba(53, 17, 101, 0.4);
+    margin-bottom: 120px;
+}
+.host-sction .host-detels{
+    text-align: left;
+    padding: 40px;
+    padding-bottom: 180px;
+}
+.host-sction .host-detels h2{
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+.host-sction .host-detels p{
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+.host-sction .host-detels .logo .logo-size {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid;
+    border-radius: 50%;
+}
+.host-sction .host-detels .logo{
+    display: flex;
+    gap: 8px;
+}
 
 
 
 /* Responsive with Media Queries */
 @media screen and (max-width:576px) {
     .navbar{
-        max-width: 100%;
+        width: 100%;
         height: 60px;
         padding: 16px 18px ;
     }
