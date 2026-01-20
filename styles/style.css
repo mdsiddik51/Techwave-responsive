@@ -1,8 +1,10 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 body{
+    margin: 0;
     overflow-x: hidden;
 }
 
@@ -11,13 +13,14 @@ body{
   font-optical-sizing: auto;
 }
 .navbar{
-    max-width: 1600px;
+    max-width: 100vw;
+    width: 100%;
     background-color: #1A0B2E;
     height: 92px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 200px;
+    padding: 16px 5%;
 }
 .navbar ul li{
     display: inline;
@@ -54,22 +57,23 @@ hr{
 }
 main .hero-container{
     background-image: url(../assets/hero-bg.png);
+    background-position: center;
+    background-position: center;
     background-size: cover;
-    max-width: 1600px;
     width: 100%;
     height: 760px;
 }
 
 main .hero-container .circle{
     position: absolute;
-    top: 32%;
-    left: 41%;
+    top: 28%;
+    left: 38%;
 
 }
 main .hero-container .microphon{
     position: absolute;
-    top: 42%;
-    left: 49%;
+    top: 39%;
+    left: 46%;
 }
 main .hero-container .hero-button h1{
     color: #ffffff;
@@ -78,13 +82,16 @@ main .hero-container .hero-button h1{
     margin-top: 40px;
 }
 main .hero-container .hero-button{
-    margin: 492px 525px 101px 525px ;
+    margin: 492px 525px 101px 525px;
     text-align: center;
 }
 main .hero-container .hero-button p{
     font-size: 1rem;
     color: #ffffff;
     margin-top: 8px;
+}
+#btn-hero{
+    display: flex;
 }
 main .hero-container button{
     color: #ffffff;
@@ -127,20 +134,20 @@ main .hero-container .microphon-img .badge{
     font-size: 1.25rem;
     font-weight: 500;
     border-radius: 1000px;
-     position: relative;
-    left: 58%;
-    top: 150px;
+    position: relative;
+    left: 57%;
+    top: 175px;
     margin-bottom: 101px;
 }
 
 .about-section .about-container{
-    max-width: 1600px;
+    width: 100%;
     height: 648px;
     background-color: #1A0B2E;
     justify-items: center;
 }
 .about-section .about-container .abut-detels{
-    width: 1200px;
+    width: 100%;
     height: 223px;
     text-align: center;
     padding-top: 50px;
@@ -256,7 +263,7 @@ main .hero-container .microphon-img .badge{
 }
 .card-1{
     width: 380px;
-    height: 557px;
+    height: 480px;
     padding: 40px;
     gap: 16px;
 
@@ -275,7 +282,6 @@ main .hero-container .microphon-img .badge{
     width: 380px;
     height: 273px;
 }
-
 .episodes-section {
     width: 100%;
     height: 1340px;
@@ -441,52 +447,200 @@ main .hero-container .microphon-img .badge{
     
 }
 
-
-
-/* Responsive with Media Queries */
-@media screen and (max-width:576px) {
+/* Small device: up to 576 px */
+@media screen and (max-width: 576px){
+        *{
+        overflow-x: hidden;
+    }
     .navbar{
-        width: 100%;
+
         height: 60px;
-        padding: 16px 18px ;
+        padding: 16px 20px;
+        overflow-x: hidden;
     }
     .navbar .logo img{
         width: 137px;
         height: 20px;
     }
-    .navbar ul,button{
+    .navbar ul li, .btn{
         display: none;
     }
     .navbar .hamburger-menu{
-        content: url(../assets/hamburger-menu.png);
+        background-image: url(../assets/hamburger-menu.png);
         margin-right: 18px;
+        height: 24px;
+        width: 24px;
+        background-repeat: no-repeat;
     }
     main .hero-container{
-        width: 440;
-        height: 466px;
-        background-position: bottom center;
-        background-size: cover;
+        height: 476px;
     }
-    main .hero-container .microphon-img .circle{
+    main .hero-container .circle{
         width: 200px;
         height: 200px;
-        top: 18%;
-        left: 30%;
-        margin-bottom: 20px;
+        position: absolute;
+        top: 15%;
+        left: 32%;
     }
-    main .hero-container .microphon-img .microphon{
-        height: 80px;
-        top: 25%;
-        left: 44%;
+    main .hero-container .microphon{
+        width: 80px;
+        position: absolute;
+        top: 19%;
+        left: 43%;
     }
     main .hero-container .microphon-img .badge{
         width: 70px;
         height: 35px;
-        top: 75px;
-        left: 55%;
+        color: #1A0B2E;
+        background-color: #00FF88;
+        padding: 5px 14px;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 1000px;
+        position: absolute;
+        top: 15%;
+    }
+    main .hero-container button{
+    color: #ffffff;
+    font-size: 1;
+    font-weight: 500;
+    }
+    main .hero-container .hero-button .hero-section-button-1{
+    width: 201px;
+    height: 44px;
+    background: linear-gradient(47.64deg, rgba(247, 233, 63, 1) 16.531%,rgba(251, 9, 180, 1) 49.819%,rgba(145, 0, 248, 1) 81.648%);
+    padding: 5px 10px;
+    border-radius: 25px;
+    border: none;
+    margin-top: 24px;
+    }
+    main .hero-container .hero-button .hero-section-button-2{
+    width: 201px;
+    height: 44px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    margin-top: 24px;
+    margin-left: 8px;
+    margin-bottom: 101px;
+    }
+    main .hero-container .hero-button h1{
+        color: #ffffff;
+        font-size: 1.75rem;
+        font-weight: 900;
+        margin-top: 10px;
+    }
+    main .hero-container .hero-button{
+        margin: 290px 42px 50px 42px;
+        text-align: center;
+        position: absolute;
+    }
+    main .hero-container .hero-button p{
+        font-size: 0.5rem;
+        color: #ffffff;
+        margin-top: 2px;
+    }
+    #btn-hero{
+        display: flex;
+    }
+    main .hero-container button{
+        color: #ffffff;
+        font-size: 1.25rem;
+        font-weight: 500;
     }
 
-    
-}
+    .about-section .about-container{
+    width: 440;
+    height: 580px;
+    padding: 10px;
+    }
+    .about-section .about-container .abut-detels{
+        justify-content: space-around;
+        padding-top: 35px;
+    }
+    .about-section .about-container .abut-detels h1{
+    font-size: 1.75rem;
+    font-style: 700;
+    }
+    .about-section .about-container .abut-detels h5,p{
+    font-size: 0.75rem;
+    font-weight: 400;
+    }
+    .about-hr{
+    width: 400px;
+    height: 0;
+    margin: 40px auto;
+    }
+    .Rating-container{
+    display: grid;
+    grid-template-areas: "Rating-1 Rating-2"
+                         "Rating-3 Rating-4";
+    justify-items: center;
+    gap: 30px;
+    }
+    .choose-container{
+    width: 100%;
+    height: 1450px;
+    background-color: rgba(35, 14, 61, 1);
+    padding: 0 20px;
+    align-items: center;
+    overflow-y: hidden;
+    }
+    .choose-section .choose-container h2{
+    font-size: 2rem;
+    font-style: 700;
+    color: #ffffff;
+    padding: 40px 20px 16px 20px;
+    }
+    .card-container{
+        display: grid;
+        grid-template-areas: "card-1"
+                            "card-2"
+                            "card-3"
+                            "card-4"
+                            "card-5";
+    }
+    .choose-section .choose-container .card-container .card h3{
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-size: 700;
+        margin-bottom: 16px;
+        text-align: center;
+        overflow-y: hidden;
+    }
+    .choose-section .choose-container .card-container .card-1 img{
+    padding-top: 8px;
+    }
+    .choose-section .choose-container .card-container .card img{
+    margin-bottom: 8px;
+    }
+    .card-1{
+    width: 400px;
+    height: 300px;
+    align-items: center;
+    padding-bottom: 40px;
+    overflow-y: hidden;
+    margin-bottom: 30px;
+    text-align: left;
+    }
+    .card-2, .card-3{
+    width: 400px;
+    height: 215px;
+    margin-bottom: 30px;
+    text-align: left;
+    }
+    .card-4{
+    width: 400px;
+    height: 331px;
+    text-align: left;
+    margin-bottom: 30px;
+    }
+    .card-5{
+    width: 400px;
+    height: 215px;
+    text-align: left;
+    }
 
+
+}
 
