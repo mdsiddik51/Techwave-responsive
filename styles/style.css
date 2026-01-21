@@ -78,7 +78,7 @@ main .hero-container .hero-button h1{
     margin-top: 40px;
 }
 main .hero-container .hero-button{
-    margin: 492px 525px 101px 525px;
+    margin: 492px auto;
     text-align: center;
 }
 main .hero-container .hero-button p{
@@ -88,6 +88,7 @@ main .hero-container .hero-button p{
 }
 #btn-hero{
     display: flex;
+    justify-content: center;
 }
 main .hero-container button{
     color: #ffffff;
@@ -166,28 +167,15 @@ main .hero-container .microphon-img .badge{
     margin: 80px auto;
 
 }
-.Rating-1{
-    grid-area: Rating-1;
-}
-.Rating-2{
-    grid-area: Rating-2;
-}
-.Rating-3{
-    grid-area: Rating-3;
-}
-.Rating-4{
-    grid-area: Rating-4;
-}
+
 .Rating-container{
     display: grid;
-    grid-template-areas: "Rating-1 Rating-2 Rating-3 Rating-4" ;
+    grid-template-columns: repeat(4, 1fr);
     text-align: center;
-    gap: 80px;
+    gap: 30px;
     
 }
-.Rating{
-    margin-left: 80px;
-}
+
 .Rating-container .rating-header{
     font-size: 3rem;
     font-weight: 900;
@@ -296,9 +284,12 @@ main .hero-container .microphon-img .badge{
     margin-bottom: 40px;
 }
 .epsoeds{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 .epsoeds .episodes-card{
     width: 380px;
@@ -403,22 +394,22 @@ main .hero-container .microphon-img .badge{
     gap: 8px;
 }
 .footer-section{
-    width: 100vw;
+    width: 100%;
     background-image: url(../assets/footer-bg.png);
     justify-items: center;
-    padding: 120px;
+    padding: 120px 0;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     text-align: center; 
 }
 .footer-section .footer-logo img{
-    margin-bottom: 32px;
+    padding-bottom: 32px;
 }
-.footer-section .footer-logo-section ul li{
+.footer-section .footer-logo-section ul {
     list-style: none;
-    margin-right: 40px;
-    display: inline;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     transition: transform 0.7s ease, color 0.5s ease;
 }
 .footer-section .footer-logo-section ul li:hover{
@@ -449,9 +440,7 @@ main .hero-container .microphon-img .badge{
 
 /* Small device: up to 576 px */
 @media screen and (max-width: 576px){
-        *{
-        overflow-x: hidden;
-    }
+    
     .navbar{
 
         height: 60px;
@@ -472,21 +461,19 @@ main .hero-container .microphon-img .badge{
         width: 24px;
         background-repeat: no-repeat;
     }
-    main .hero-container{
-        height: 476px;
-    }
+    
     main .hero-container .circle{
         width: 200px;
         height: 200px;
         position: absolute;
         top: 15%;
-        left: 32%;
+        left: 28%;
     }
     main .hero-container .microphon{
         width: 80px;
         position: absolute;
-        top: 19%;
-        left: 43%;
+        top: 21%;
+        left: 42%;
     }
     main .hero-container .microphon-img .badge{
         width: 70px;
@@ -500,62 +487,30 @@ main .hero-container .microphon-img .badge{
         position: absolute;
         top: 15%;
     }
-    main .hero-container button{
-    color: #ffffff;
-    font-size: 1;
-    font-weight: 500;
-    }
-    main .hero-container .hero-button .hero-section-button-1{
-    width: 201px;
-    height: 44px;
-    background: linear-gradient(47.64deg, rgba(247, 233, 63, 1) 16.531%,rgba(251, 9, 180, 1) 49.819%,rgba(145, 0, 248, 1) 81.648%);
-    padding: 5px 10px;
-    border-radius: 25px;
-    border: none;
-    margin-top: 24px;
-    }
+   
     main .hero-container .hero-button .hero-section-button-2{
     width: 201px;
-    height: 44px;
-    border-radius: 25px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: none;
-    margin-top: 24px;
-    margin-left: 8px;
-    margin-bottom: 101px;
+   
     }
-    main .hero-container .hero-button h1{
-        color: #ffffff;
-        font-size: 1.75rem;
-        font-weight: 900;
-        margin-top: 10px;
-    }
+    
     main .hero-container .hero-button{
-        margin: 290px 42px 50px 42px;
+        margin-top: 290px;
         text-align: center;
         position: absolute;
     }
-    main .hero-container .hero-button p{
-        font-size: 0.5rem;
-        color: #ffffff;
-        margin-top: 2px;
+    .hero-button p{
+        padding: 0 20px;
     }
+    
     #btn-hero{
         display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-    main .hero-container button{
-        color: #ffffff;
-        font-size: 1.25rem;
-        font-weight: 500;
-    }
+   
 
-    .about-section .about-container{
-    width: 440;
-    height: 580px;
-    padding: 10px;
-    }
+    
     .about-section .about-container .abut-detels{
-        justify-content: space-around;
         padding-top: 35px;
     }
     .about-section .about-container .abut-detels h1{
@@ -565,6 +520,7 @@ main .hero-container .microphon-img .badge{
     .about-section .about-container .abut-detels h5,p{
     font-size: 0.75rem;
     font-weight: 400;
+    padding: 0 2px;
     }
     .about-hr{
     width: 400px;
@@ -572,25 +528,15 @@ main .hero-container .microphon-img .badge{
     margin: 40px auto;
     }
     .Rating-container{
-    display: grid;
-    grid-template-areas: "Rating-1 Rating-2"
-                         "Rating-3 Rating-4";
-    justify-items: center;
-    gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
     }
     .choose-container{
-    width: 100%;
-    height: 1450px;
     background-color: rgba(35, 14, 61, 1);
-    padding: 0 20px;
-    align-items: center;
-    overflow-y: hidden;
     }
     .choose-section .choose-container h2{
     font-size: 2rem;
     font-style: 700;
     color: #ffffff;
-    padding: 40px 20px 16px 20px;
     }
     .card-container{
         display: grid;
@@ -599,6 +545,7 @@ main .hero-container .microphon-img .badge{
                             "card-3"
                             "card-4"
                             "card-5";
+
     }
     .choose-section .choose-container .card-container .card h3{
         color: #ffffff;
@@ -614,30 +561,72 @@ main .hero-container .microphon-img .badge{
     }
     .card-1{
     width: 400px;
-    height: 300px;
     align-items: center;
-    padding-bottom: 40px;
-    margin-bottom: 30px;
     text-align: left;
+    margin-bottom: 30px;
     }
     .card-2, .card-3{
     width: 400px;
-    height: 215px;
     margin-bottom: 30px;
     text-align: left;
     }
     .card-4{
     width: 400px;
-    height: 331px;
     text-align: left;
     margin-bottom: 30px;
     }
     .card-5{
     width: 400px;
-    height: 215px;
     text-align: left;
     }
 
+    .epsoeds{
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 15px;
+    }
 
+    .epsoeds .episodes-card:hover{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transform: scale(1.05);
+    }
+
+    .epsoeds .episodes-card{
+    transition: transform 0.3s ease, margin-top 0.3s ease, margin-bottom 0.3s ease;
+}
+
+    .episodes-section .episodes-container h2{
+        padding-top: 30px;
+        font-size: 2.12rem;
+    }
+    .host-sction{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .host-img img{
+        width: 200px;
+        padding-top: 50px;
+    
+    }
+
+    .host-detels h2{
+        text-align: center;
+    }
+
+    .logo{
+        justify-content: center;
+    }
+
+    .footer-section .footer-logo-section ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px;
+    }
+    .footer-logo-section{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
 }
 
