@@ -110,7 +110,7 @@ main .hero-container .hero-button .hero-section-button-2{
     height: 44px;
     border-radius: 25px;
     background-color: rgba(255, 255, 255, 0.1);
-    border: none;
+    border: 2px solid #00FF88;
     margin-top: 24px;
     margin-left: 8px;
     margin-bottom: 101px;
