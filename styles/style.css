@@ -89,6 +89,7 @@ main .hero-container .hero-button p{
 #btn-hero{
     display: flex;
     justify-content: center;
+    gap: 5px;
 }
 main .hero-container button{
     color: #ffffff;
@@ -109,6 +110,7 @@ main .hero-container .hero-button .hero-section-button-2{
     width: 147px;
     height: 44px;
     border-radius: 25px;
+    color: #00FF88;
     background-color: rgba(255, 255, 255, 0.1);
     border: 2px solid #00FF88;
     margin-top: 24px;
@@ -132,8 +134,8 @@ main .hero-container .microphon-img .badge{
     font-weight: 500;
     border-radius: 1000px;
     position: relative;
-    left: 57%;
-    top: 175px;
+    left: 54%;
+    top: 120px;
     margin-bottom: 101px;
 }
 
@@ -159,6 +161,7 @@ main .hero-container .microphon-img .badge{
 .about-section .about-container .abut-detels h5,p{
     font-size: 16px;
     font-weight: 400;
+
 }
 
 .about-hr{
@@ -172,8 +175,7 @@ main .hero-container .microphon-img .badge{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     text-align: center;
-    gap: 30px;
-    
+    gap: 100px;  
 }
 
 .Rating-container .rating-header{
@@ -352,14 +354,12 @@ main .hero-container .microphon-img .badge{
     align-items: center;
     margin: 0 auto;
     border-radius: 40px;
-    width: 1200px;
+    width: 80%;
     background-color: rgba(53, 17, 101, 0.4);
 }
-.host-img{
-    padding-left: 50px;
-}
+
 .host-img img{
-    width: 300px;
+    width: 400px;
 }
 .host-sction .host-detels{
     text-align: left;
@@ -410,9 +410,9 @@ main .hero-container .microphon-img .badge{
     list-style: none;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    transition: transform 0.7s ease, color 0.5s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
-.footer-section .footer-logo-section ul li:hover{
+.footer-section .footer-logo-section ul:hover{
     color: #00FF88;
     transform: scale(1.1);
 }
@@ -440,7 +440,10 @@ main .hero-container .microphon-img .badge{
 
 /* Small device: up to 576 px */
 @media screen and (max-width: 576px){
-    
+    *{
+        max-width: 100%;
+        overflow-x: hidden;
+    }
     .navbar{
 
         height: 60px;
@@ -472,8 +475,8 @@ main .hero-container .microphon-img .badge{
     main .hero-container .microphon{
         width: 80px;
         position: absolute;
-        top: 21%;
-        left: 42%;
+        top: 160px;
+        left: 173px;
     }
     main .hero-container .microphon-img .badge{
         width: 70px;
@@ -485,12 +488,18 @@ main .hero-container .microphon-img .badge{
         font-weight: 600;
         border-radius: 1000px;
         position: absolute;
-        top: 15%;
+        top: 14%;
+        left: 60%;
+    }
+
+    #btn{
+        width: 201px;
+        font-size: 1rem;
+        padding: 12px 20px;
     }
    
     main .hero-container .hero-button .hero-section-button-2{
-    width: 201px;
-   
+    width: 147px;
     }
     
     main .hero-container .hero-button{
@@ -502,25 +511,17 @@ main .hero-container .microphon-img .badge{
         padding: 0 20px;
     }
     
-    #btn-hero{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-   
-
-    
     .about-section .about-container .abut-detels{
         padding-top: 35px;
+        padding: 0  5px;
     }
     .about-section .about-container .abut-detels h1{
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-style: 700;
     }
     .about-section .about-container .abut-detels h5,p{
     font-size: 0.75rem;
     font-weight: 400;
-    padding: 0 2px;
     }
     .about-hr{
     width: 400px;
@@ -529,6 +530,7 @@ main .hero-container .microphon-img .badge{
     }
     .Rating-container{
         grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
     }
     .choose-container{
     background-color: rgba(35, 14, 61, 1);
@@ -540,6 +542,7 @@ main .hero-container .microphon-img .badge{
     }
     .card-container{
         display: grid;
+        justify-items: center;
         grid-template-areas: "card-1"
                             "card-2"
                             "card-3"
@@ -560,40 +563,39 @@ main .hero-container .microphon-img .badge{
     margin-bottom: 8px;
     }
     .card-1{
-    width: 400px;
+    width: 90%;
     align-items: center;
     text-align: left;
     margin-bottom: 30px;
     }
     .card-2, .card-3{
-    width: 400px;
+    width: 90%;
     margin-bottom: 30px;
     text-align: left;
     }
     .card-4{
-    width: 400px;
+    width: 90%;
     text-align: left;
     margin-bottom: 30px;
     }
     .card-5{
-    width: 400px;
+    width: 90%;
     text-align: left;
     }
 
+
     .epsoeds{
         grid-template-columns: repeat(1, 1fr);
-        margin-left: 15px;
+        justify-items: center;
+    }    
+    .epsoeds .episodes-card{
+    transition: transform 0.3s ease, margin-top 0.3s ease, margin-bottom 0.3s ease;
     }
-
     .epsoeds .episodes-card:hover{
     margin-top: 20px;
     margin-bottom: 20px;
     transform: scale(1.05);
     }
-
-    .epsoeds .episodes-card{
-    transition: transform 0.3s ease, margin-top 0.3s ease, margin-bottom 0.3s ease;
-}
 
     .episodes-section .episodes-container h2{
         padding-top: 30px;
@@ -601,18 +603,19 @@ main .hero-container .microphon-img .badge{
     }
     .host-sction{
         flex-direction: column;
+        width: 90%;
         align-items: center;
+        text-align: justify;
     }
 
     .host-img img{
         width: 200px;
-        padding-top: 50px;
-    
+        padding-top: 20px;
     }
 
     .host-detels h2{
         text-align: center;
-    }
+    } 
 
     .logo{
         justify-content: center;
